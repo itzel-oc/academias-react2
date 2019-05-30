@@ -9,7 +9,7 @@ import IconButton from '@material-ui/core/IconButton';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import './Cards.css';
 
-function CardPost( props ) {
+function CardCompletePost( props ) {
   return (
     props.posts.map( (post) => 
   <Grid item xs={12} sm={6} key={post.id}> 
@@ -20,6 +20,7 @@ function CardPost( props ) {
           <Typography variant="h3">{post.title}</Typography>
           <Typography >3 Comments</Typography>
           <Typography >{post.shortDescription}</Typography>
+          <Typography >{post.description}</Typography>
           <Typography >{post.category}</Typography>
         </CardContent>
       </CardActionArea>
@@ -27,4 +28,4 @@ function CardPost( props ) {
   </Grid>));
 }
 
-export default CardPost
+export default CardCompletePost
